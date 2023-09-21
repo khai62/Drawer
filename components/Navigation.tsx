@@ -3,7 +3,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Array, Objek, For } from "../screen";
+import { Array, Objek, For, Testing } from "../screen";
 
 
 const Drawer = createDrawerNavigator()
@@ -60,6 +60,17 @@ const Navigation: React.FC = () => {
                     options={{
                         drawerLabel: 'For',
                         title: 'For',
+                        drawerIcon: () => (
+                            <MaterialCommunityIcons name="cloud" size={20} color={'black'} />
+                        )
+                    }}
+                />
+                <Drawer.Screen
+                    name="Testing"
+                    component={Testing}
+                    options={{
+                        drawerLabel: 'Testing',
+                        title: 'Testing',
                         drawerIcon: () => (
                             <MaterialCommunityIcons name="cloud" size={20} color={'black'} />
                         )
