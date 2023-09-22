@@ -1,34 +1,12 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
+import { View, Text } from 'react-native'
+import React from 'react'
 
-const App = () => {
-    const [tasks, setTasks] = useState<string[]>([]);
-    const [newTask, setNewTask] = useState<string>('');
-
-    const handleAddTask = () => {
-        if (newTask) {
-            setTasks([...tasks, newTask]);
-            setNewTask('');
-        }
-    };
-
+const Testing = () => {
     return (
         <View>
-            <TextInput
-                placeholder="What needs to be done?"
-                value={newTask}
-                onChangeText={(text) => setNewTask(text)}
-                style={{ width: 300 }}
-            />
-            <Button title="Add" onPress={handleAddTask} />
-            {tasks.map((task, index) => (
-                <Text key={index}>{task}</Text>
-            ))}
+            <Text>Testing</Text>
         </View>
-    );
-};
+    )
+}
 
-export default App;
-
-
-// besok kau pahami baginmana logikanya ? 
+export default Testing
